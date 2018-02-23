@@ -1,5 +1,4 @@
 node('docker') {
-    def app
     docker.withRegistry('https://registry.hub.docker.com', 'dockabhi-jenkins-creds') {
     
         git url: "https://github.com/abhisheksurendran14/GitRepository.git", credentialsId: 'abhisheksurendran14'
