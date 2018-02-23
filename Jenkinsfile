@@ -8,10 +8,14 @@ node("docker") {
         println commit_id
     
         stage "build"
+        {
         def app = docker.build "abhisheksurendran14/GitRepository"
+        }
     
         stage "publish"
+        {
         app.push 'master'
         app.push "${commit_id}"
+        }
     }
 }
