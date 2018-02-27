@@ -14,7 +14,6 @@ node('docker') {
     
         stage ('build')
         {
-        sh "sudo usermod -aG docker Jenkins"
         def app = docker.build "testbuild"
         }
     
