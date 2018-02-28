@@ -14,8 +14,7 @@ node('docker') {
     
         stage ('build')
         {
-           
-        def app = sudo docker.build "gitrepository"
+        def app = sh "sudo docker build ."
         }
     
         stage ('publish')
