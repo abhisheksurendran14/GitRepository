@@ -19,6 +19,8 @@ node('docker') {
     
         stage ('publish')
         {
+        
+        sh "docker login --username=dockabhi --password=godbosons000cc"
         sh "sudo docker push dockabhi/test_image"
         }
     }
