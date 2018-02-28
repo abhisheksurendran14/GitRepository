@@ -14,7 +14,7 @@ node('docker') {
     
         stage ('build')
         {
-        def app = docker.build "GitRepository"
+        def app = docker.build "gitrepository"
         }
     
         stage ('publish')
