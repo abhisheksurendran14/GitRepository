@@ -14,7 +14,7 @@ node('docker') {
     
         stage ('build')
         {
-        sh "sudo docker build -t test_image"
+        sh "sudo docker build -t test_image ."
         }
     
         stage ('publish')
