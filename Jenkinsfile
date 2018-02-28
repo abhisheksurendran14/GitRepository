@@ -14,13 +14,12 @@ node('docker') {
     
         stage ('build')
         {
-        def app = sh "sudo docker build ."
+        sh "sudo docker build -t test_image"
         }
     
         stage ('publish')
         {
-        app.push 'master'
-        app.push "${commit_id}"
+        sh "sudo docker push test_image"
         }
     }
 }
