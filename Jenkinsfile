@@ -14,12 +14,12 @@ node('docker') {
     
         stage ('build')
         {
-        sh "sudo docker build -t test_image ."
+        sh "sudo docker build -t dockabhi/test_image ."
         }
     
         stage ('publish')
         {
-        sh "sudo docker push test_image"
+        sh "sudo docker push dockabhi/test_image"
         }
     }
 }
